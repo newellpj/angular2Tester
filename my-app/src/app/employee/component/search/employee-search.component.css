@@ -1,0 +1,32 @@
+.search-result{
+  border-bottom: 1.5px solid white;
+  border-left: 1.5px solid white;
+  border-right: 1.5px solid white;
+  width:195px;
+  height: 20px;
+  padding: 7px !important;
+  background-color: #FCFCFC;
+  cursor: pointer;
+}
+
+.search-result:hover{
+  background: rgba(66,139,202, 0.2) ;
+}
+
+#search-box{
+  width: 200px;
+  height: 20px;
+}
+
+#search-component{
+      font-family: 'Roboto Condensed',sans-serif !important;
+}
+
+
+.searchEmpName{
+  padding: 7px !important;
+  font-size: 1em;
+  border: solid 1.5px #dcdcdc;
+  border-radius: 3px;
+
+}

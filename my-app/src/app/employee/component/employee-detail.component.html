@@ -1,0 +1,12 @@
+<div *ngIf="employee">
+  <h2>{{employee.name}} details!</h2>
+  <div>
+    <label>id: </label>{{employee.id}}</div>
+  <div>
+    <label>name: </label>
+    <input class="empName responsive" [(ngModel)]="employee.name" placeholder="name" />
+  </div>
+  <button (click)="save()">Save</button>
+
+  <button (click)="goBack()">Back</button>
+</div>

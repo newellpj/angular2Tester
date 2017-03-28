@@ -1,0 +1,31 @@
+
+  <h2>Our Employees</h2>
+
+  <div>
+     <input class="addEmpName" #employeeName placeholder="Employee Name"/>
+    <button class="addEmpBtn" (click)="add(employeeName.value); employeeName.value=''"> <!-- call add method then on return clear employeeName var value -->
+        Add
+    </button>
+
+
+
+  </div>
+
+
+  <ul class="employees">
+    <li *ngFor="let employee of employees"
+      [class.selected]="employee === selectedEmployee"
+      (click)="onSelect(employee)">
+      <span class="badge">{{employee.id}}</span>
+          {{employee.name}}
+      <button class="deleteButton"  (click)="delete(employee); $event.stopPropagation()"> 
+          x
+      </button>
+    </li>
+  </ul>
+<div *ngIf="selectedEmployee">
+  <h2>
+    {{selectedEmployee.name | uppercase}} is current employee
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
